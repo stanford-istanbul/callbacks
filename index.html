@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title></title>
+  <style>
+  .red-box
+  {
+    background-color: rgba(200, 0, 0, 1.0);
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    margin: 10px;
+  }
+  </style>
+</head>
+<body>
+  <script>
+  function changeText(src) {
+    src.innerHTML = "Thanks!";
+  }
+
+  function updateLabel(src) {
+    document.getElementById('onchange-response').innerHTML = src.value;
+  }
+  </script>
+  <strong>onclick</strong>
+  <div class="red-box" onclick='changeText(this);'>Original Text</div>
+  <strong>onmouseover</strong>
+  <div class="red-box" onmouseover='changeText(this);'>Original Text</div>
+  <strong>onmouseout</strong>
+  <div class="red-box" onmouseout='changeText(this);'>Original Text</div>
+  <strong>onmousedown</strong>
+  <div class="red-box" onmousedown='changeText(this);'>Original Text</div>
+  <strong>onmouseup</strong>
+  <div class="red-box" onmouseup='changeText(this);'>Original Text</div>
+  <strong>onchange</strong>
+  <input onchange="updateLabel(this)"></input>
+  <div class="red-box" id="onchange-response">Original Text</div>
+
+</body>
+</html>
